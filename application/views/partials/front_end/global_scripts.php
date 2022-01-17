@@ -13,6 +13,13 @@ $(document).ready(function(){
         }, 2000);
     });
 
+    /* Allow only numbers */
+    $('#mobile').keypress(function(event){
+        if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+            event.preventDefault(); //stop character from entering input
+        }
+    });
+
     /* Errors Function */
     function removeErrors(){
         $('.name_error').html('');

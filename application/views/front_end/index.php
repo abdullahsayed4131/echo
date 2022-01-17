@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Mobile</label>
-                            <input type="text" name="mobile" class="form-control" id="mobile">
+                            <input type="text" name="mobile" class="form-control" id="mobile" maxlength="10">
                             <span class="mobile_error text-danger"></span>
                         </div>
                         <div class="form-group">
