@@ -60,5 +60,6 @@ $route['default_controller'] = 'HomeController';
 $route['event_details'] = 'HomeController/eventDetails';
 $route['single_event_details'] = 'HomeController/singleEventDetails';
 $route['book_event'] = 'HomeController/bookEvent';
-$route['event/confirmation/(:any)'] = 'EventConfirmation/confirmEventDetails';
-$route['event/printPDF/(:any)'] = 'EventConfirmation/convertpdf';
+$route['event/confirmation/(:any)'] = 'EventConfirmation/confirmEventDetails/$1';
+$route['event/printPDF/(:any)'] = 'EventConfirmation/convertpdf/$1';
+

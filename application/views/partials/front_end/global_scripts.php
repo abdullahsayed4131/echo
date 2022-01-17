@@ -1,9 +1,6 @@
 <script type="text/javascript" src="<?php echo base_url('assets/front_end/js/jquery.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/front_end/js/popper.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/front_end/js/bootstrap.js'); ?>"></script>
-<!-- This partical js and scrolling and other functions must & should load in only home page not in other pages -->
-<!-- Home page means entry point of url segment is zero -->
-<?php if($this->uri->total_segments() == 0){ ?>
 <script type="text/javascript" src="<?php echo base_url('assets/front_end/js/particles.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/front_end/js/app.js'); ?>"></script>
 <script>
@@ -105,4 +102,3 @@ $(document).ready(function(){
 
 })
 </script>
-<?php } ?>

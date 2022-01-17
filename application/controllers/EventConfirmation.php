@@ -11,9 +11,8 @@ class EventConfirmation extends CI_Controller {
         $this->load->library('pdf');
 	 }
 
-	public function confirmEventDetails(){
-
-		$booked_unique_id = htmlspecialchars(strip_tags(trim($this->uri->segment(3))));
+	public function confirmEventDetails($id){
+		$booked_unique_id = htmlspecialchars(strip_tags(trim($id)));
 
 		/* Verify This Booking Id Exist Within The Database */
 		$data['res']  = $this->BookingDetail->verifyBookingEvent($booked_unique_id);
@@ -24,9 +23,9 @@ class EventConfirmation extends CI_Controller {
 
 	}
 
-    public function convertpdf(){
+    public function convertpdf($id){
  
-            $booked_unique_id = htmlspecialchars(strip_tags(trim($this->uri->segment(3))));
+            $booked_unique_id = htmlspecialchars(strip_tags(trim($id)));
 
             /* Verify This Booking Id Exist Within The Database */
             $data['res']  = $this->BookingDetail->verifyBookingEvent($booked_unique_id);
